@@ -79,7 +79,12 @@ st.write("Загрузите CSV и сразу получите предсказ
 uploaded_file = st.sidebar.file_uploader("Загрузите CSV с клиентами", type=["csv"])
 
 if uploaded_file is None:
-    st.info("👈 Для старта нужен файл. Можете использовать churn_clients_demo.csv")
+    st.info(
+        "👈 Для старта нужен файл. Можно скачать демо-датасет "
+        "[churn_clients_demo.csv]"
+        "(https://raw.githubusercontent.com/Murcha1990/datasets/"
+        "refs/heads/main/churn_cliens_demo.csv)"
+    )
     st.stop()
 
 try:
